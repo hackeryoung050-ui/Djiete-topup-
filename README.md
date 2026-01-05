@@ -3,752 +3,467 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DJIETE TOP UP - Recharge Free Fire</title>
+    <title>Joyeux Anniversaire Gayoo !</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary-color: #ff6b00;
-            --secondary-color: #2c3e50;
-            --accent-color: #e74c3c;
-            --light-color: #ecf0f1;
-            --dark-color: #2c3e50;
-            --text-color: #333;
-            --bg-color: #fff;
-            --card-bg: #f9f9f9;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            --transition: all 0.3s ease;
-        }
-
-        .dark-mode {
-            --primary-color: #ff8c42;
-            --secondary-color: #34495e;
-            --accent-color: #e74c3c;
-            --light-color: #2c3e50;
-            --dark-color: #ecf0f1;
-            --text-color: #ecf0f1;
-            --bg-color: #1a1a2e;
-            --card-bg: #16213e;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-        }
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            transition: var(--transition);
-            line-height: 1.6;
-        }
-
-        header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 1rem 0;
-            box-shadow: var(--shadow);
-            position: sticky;
-            top: 0;
-            z-index: 100;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f9c5d1 0%, #f5a9c8 50%, #c2a8e3 100%);
+            color: #5a3d5c;
+            overflow-x: hidden;
+            min-height: 100vh;
         }
 
         .container {
-            width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .logo img {
-            height: 50px;
-            border-radius: 50%;
-        }
-
-        .logo h1 {
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-
-        .logo span {
-            color: var(--accent-color);
-        }
-
-        .theme-toggle {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .theme-toggle:hover {
-            transform: rotate(30deg);
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 20px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 5px 10px;
-            border-radius: 5px;
-            transition: var(--transition);
-        }
-
-        nav a:hover {
-            background-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://files.catbox.moe/k0qyoc.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 5rem 0;
-            text-align: center;
-        }
-
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 2rem;
-        }
-
-        .cta-button {
-            display: inline-block;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: var(--transition);
-            box-shadow: 0 4px 15px rgba(255, 107, 0, 0.4);
-        }
-
-        .cta-button:hover {
-            background-color: var(--accent-color);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
-        }
-
-        .section {
-            padding: 4rem 0;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            color: var(--secondary-color);
-        }
-
-        .section-title h2 {
-            font-size: 2.2rem;
-            position: relative;
-            display: inline-block;
-            padding-bottom: 10px;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary-color);
-            border-radius: 2px;
-        }
-
-        .products {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .product-card {
-            background-color: var(--card-bg);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            transition: var(--transition);
-            text-align: center;
-        }
-
-        .product-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .product-header {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 15px;
-        }
-
-        .product-header h3 {
-            font-size: 1.5rem;
-            margin-bottom: 5px;
-        }
-
-        .product-body {
             padding: 20px;
         }
 
-        .product-price {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin: 10px 0;
-        }
-
-        .product-button {
-            display: block;
-            width: 100%;
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .product-button:hover {
-            background-color: var(--accent-color);
-        }
-
-        .testimonials {
-            background-color: var(--light-color);
-            padding: 4rem 0;
-        }
-
-        .testimonial-container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .testimonial {
-            background-color: var(--card-bg);
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-            margin-bottom: 30px;
-        }
-
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .testimonial-avatar {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: bold;
-            margin-right: 15px;
-        }
-
-        .testimonial-name {
-            font-weight: 600;
-            font-size: 1.1rem;
-        }
-
-        .testimonial-date {
-            color: #777;
-            font-size: 0.9rem;
-        }
-
-        .testimonial-text {
-            line-height: 1.7;
-        }
-
-        .rating {
-            color: #ffc107;
-            margin-top: 10px;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: var(--card-bg);
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: var(--shadow);
-        }
-
-        .form-group {
-            margin-bottom: 20px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            transition: var(--transition);
-        }
-
-        .form-control:focus {
-            border-color: var(--primary-color);
-            outline: none;
-            box-shadow: 0 0 0 3px rgba(255, 107, 0, 0.2);
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .submit-btn {
-            background-color: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 12px 25px;
-            border-radius: 5px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .submit-btn:hover {
-            background-color: var(--accent-color);
-        }
-       footer {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 3rem 0 1.5rem;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-bottom: 2rem;
-        }
-
-        .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--primary-color);
-        }
-
-        .footer-column p {
-            margin-bottom: 15px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: white;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .social-links a:hover {
-            background-color: var(--primary-color);
-            transform: translateY(-3px);
-        }
-
-        .copyright {
+        /* Header */
+        header {
             text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 20px;
+            animation: fadeIn 2s ease-out;
         }
 
-        .whatsapp-float {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        .title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            color: #ff4081;
+            text-shadow: 3px 3px 0 #ffb3d9, 6px 6px 0 rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            line-height: 1.2;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .subtitle {
             font-size: 1.8rem;
-            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
-            z-index: 1000;
-            cursor: pointer;
-            transition: var(--transition);
-            animation: pulse 2s infinite;
+            color: #8a4b8c;
+            font-weight: 300;
+            margin-bottom: 40px;
         }
 
-        .whatsapp-float:hover {
+        /* Main Content */
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        /* Love Message Section */
+        .love-message {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            animation: slideUp 1.5s ease-out;
+        }
+
+        .love-message:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 10px;
+            height: 100%;
+            background: linear-gradient(to bottom, #ff4081, #c2a8e3);
+        }
+
+        .message-title {
+            font-size: 2.5rem;
+            color: #ff4081;
+            margin-bottom: 25px;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+        }
+
+        .message-text {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            text-align: justify;
+            margin-bottom: 20px;
+            animation: textAppear 3s ease-out;
+        }
+
+        .heart-icon {
+            color: #ff4081;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            animation: heartbeat 1.5s infinite;
+        }
+
+        /* Gallery Section */
+        .gallery-section {
+            animation: fadeIn 2s ease-out 0.5s both;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: #8a4b8c;
+            text-align: center;
+            margin-bottom: 40px;
+            font-family: 'Dancing Script', cursive;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 4px;
+            background: linear-gradient(to right, #ff4081, #c2a8e3);
+            border-radius: 2px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .photo-item {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            height: 300px;
+            position: relative;
+        }
+
+        .photo-item:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.8s ease;
+        }
+
+        .photo-item:hover img {
             transform: scale(1.1);
         }
 
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
-        }
-
-        .whatsapp-tooltip {
+        .photo-caption {
             position: absolute;
-            bottom: 70px;
+            bottom: 0;
+            left: 0;
             right: 0;
-            background-color: var(--secondary-color);
+            background: rgba(90, 61, 92, 0.85);
             color: white;
-            padding: 8px 15px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            white-space: nowrap;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
+            padding: 15px;
+            transform: translateY(100%);
+            transition: transform 0.5s ease;
+            text-align: center;
         }
 
-        .whatsapp-float:hover .whatsapp-tooltip {
-            opacity: 1;
-            visibility: visible;
+        .photo-item:hover .photo-caption {
+            transform: translateY(0);
         }
 
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 20px 20px 0 0;
+            margin-top: 40px;
+            animation: fadeIn 2s ease-out 1s both;
+        }
+
+        .footer-text {
+            font-size: 1.2rem;
+            color: #8a4b8c;
+            margin-bottom: 15px;
+        }
+
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #ff4081;
+            font-weight: bold;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes textAppear {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 15px;
+            .title {
+                font-size: 3.5rem;
             }
             
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
+            .subtitle {
+                font-size: 1.4rem;
             }
             
-            .hero h2 {
+            .message-title {
                 font-size: 2rem;
             }
             
-            .hero p {
-                font-size: 1rem;
+            .message-text {
+                font-size: 1.1rem;
             }
             
-            .products {
+            .gallery {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+            
+            .photo-item {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .title {
+                font-size: 2.8rem;
+            }
+            
+            .love-message {
+                padding: 25px 20px;
+            }
+            
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Floating Hearts */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .heart {
+            position: absolute;
+            color: rgba(255, 64, 129, 0.3);
+            font-size: 20px;
+            animation: floatHeart 15s linear infinite;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="https://files.catbox.moe/k0qyoc.jpg" alt="DJIETE TOP UP Logo">
-                    <h1>DJIETE <span>TOP UP</span></h1>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#accueil">Accueil</a></li>
-                        <li><a href="#produits">Produits</a></li>
-                        <li><a href="#temoignages">Témoignages</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <button class="theme-toggle" id="themeToggle">
-                    <i class="fas fa-moon"></i>
-                </button>
-            </div>
-        </div>
-    </header>
+    <!-- Floating hearts background -->
+    <div class="floating-hearts" id="hearts-container"></div>
 
-    <section class="hero" id="accueil">
-        <div class="container">
-            <h2>Rechargez votre compte Free Fire en toute sécurité</h2>
-            <p>Obtenez vos diamants Free Fire rapidement et facilement avec DJIETE TOP UP. Service fiable et livraison instantanée !</p>
-            <a href="#produits" class="cta-button">Acheter maintenant</a>
-        </div>
-    </section>
+    <div class="container">
+        <header>
+            <h1 class="title">Joyeux Anniversaire Gayoo !</h1>
+            <p class="subtitle">Une journée spéciale pour une personne extraordinaire</p>
+        </header>
 
-    <section class="section" id="produits">
-        <div class="container">
-            <div class="section-title">
-                <h2>Nos Offres Free Fire</h2>
-                <p>Choisissez le pack de diamants qui vous convient</p>
-            </div>
-            <div class="products">
-                <!-- Les offres seront générées par JavaScript -->
-            </div>
-        </div>
-    </section>
+        <main class="main-content">
+            <section class="love-message">
+                <h2 class="message-title">Mon message pour toi</h2>
+                <div class="message-text">
+                    <p>Ma chère Gayoo,</p>
+                    
+                    <p>En ce jour si spécial, je voulais t'écrire ces mots pour célébrer non seulement ta naissance, mais aussi la personne merveilleuse que tu es. Même si la distance nous sépare parfois, sache que tu occupes une place immense dans mon cœur, chaque jour, chaque heure, chaque minute.</p>
+                    
+                    <p>Je me souviens de tous ces moments que nous avons partagés, ces rires, ces conversations interminables, ces regards échangés qui en disaient plus long que mille mots. Chaque souvenir avec toi est un trésor que je chéris profondément.</p>
+                    
+                    <p>Tu es cette lumière qui illumine mes journées même lorsqu'elles sont grises, cette douce mélodie qui résonne dans le silence de mes pensées. Ta présence dans ma vie est un cadeau inestimable, et je suis infiniment reconnaissant de te connaître, de t'aimer.</p>
+                    
+                    <p>Aujourd'hui, en ce jour d'anniversaire, je te souhaite tout le bonheur du monde. Que cette nouvelle année de ta vie t'apporte joie, réussite, épanouissement et tous ces petits bonheurs qui font briller tes yeux. Que tes rêves les plus fous se réalisent et que chaque jour te rapproche un peu plus de la vie que tu désires.</p>
+                    
+                    <p>La distance n'est qu'un test pour nous prouver que notre lien est plus fort que tout. Et chaque jour qui passe renforce ma conviction que ce que nous avons est précieux, unique et mérite d'être cultivé avec tout l'amour dont nous sommes capables.</p>
+                    
+                    <p>Joyeux anniversaire, ma belle Gayoo <i class="fas fa-heart heart-icon"></i> Puisses-tu être comblée de toutes les merveilles que la vie peut offrir. Je pense à toi aujourd'hui plus que jamais, et je célèbre ton existence avec tout mon cœur.</p>
+                    
+                    <p>Avec tout mon amour, pour aujourd'hui, pour demain, pour toujours.</p>
+                </div>
+            </section>
 
-    <section class="section testimonials" id="temoignages">
-        <div class="container">
-            <div class="section-title">
-                <h2>Avis Clients</h2>
-                <p>Ce que disent nos clients satisfaits</p>
-            </div>
-            <div class="testimonial-container">
-                <div class="testimonial">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">JD</div>
-                        <div>
-                            <div class="testimonial-name">Jean D.</div>
-                            <div class="testimonial-date">15 Mars 2023</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-text">
-                        Service rapide et fiable ! J'ai reçu mes diamants en moins de 5 minutes après paiement. Je recommande vivement DJIETE TOP UP.
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
+            <section class="gallery-section">
+                <h2 class="section-title">Nos Souvenirs</h2>
+                <div class="gallery" id="photoGallery">
+                    <!-- Les photos seront ajoutées ici dynamiquement -->
                 </div>
-                <div class="testimonial">
-                    <div class="testimonial-header">
-                        <div class="testimonial-avatar">MS</div>
-                        <div>
-                            <div class="testimonial-name">Marie S.</div>
-                            <div class="testimonial-date">2 Avril 2023</div>
-                        </div>
-                    </div>
-                    <div class="testimonial-text">
-                        Excellente communication avec le service client. Prix compétitifs et livraison instantanée. Je reviendrai pour mes prochains achats.
-                    </div>
-                    <div class="rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
+        </main>
 
-    <section class="section" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contactez-nous</h2>
-                <p>Une question ? Laissez-nous un message</p>
-            </div>
-            <div class="contact-form">
-                <form id="commentForm">
-                    <div class="form-group">
-                        <label for="name">Nom</label>
-                        <input type="text" id="name" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" class="form-control" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" class="form-control" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Envoyer le message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>DJIETE TOP UP</h3>
-                    <p>Votre partenaire de confiance pour les recharges Free Fire. Service rapide, sécurisé et fiable.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-tiktok"></i></a>
-                    </div>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact</h3>
-                    <p><i class="fas fa-phone"></i> +509 46297185</p>
-                    <p><i class="fas fa-phone"></i> +509 42377815</p>
-                    <p><i class="fas fa-envelope"></i> contact@djetetopup.com</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Liens rapides</h3>
-                    <p><a href="#accueil">Accueil</a></p>
-                    <p><a href="#produits">Produits</a></p>
-                    <p><a href="#temoignages">Témoignages</a></p>
-                    <p><a href="#contact">Contact</a></p>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 DJIETE TOP UP. Tous droits réservés.</p>
-            </div>
-        </div>
-    </footer>
-
-    <div class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
-        <div class="whatsapp-tooltip">Contactez-nous sur WhatsApp</div>
+        <footer>
+            <p class="footer-text">Je t'aime plus que les mots ne pourront jamais l'exprimer</p>
+            <p class="signature">Ton amoureux</p>
+        </footer>
     </div>
 
     <script>
-        // Données des produits
-        const products = [
-            { diamonds: "100", price: "175 G" },
-            { diamonds: "200", price: "350 G" },
-            { diamonds: "310", price: "500 G" },
-            { diamonds: "410", price: "715 G" },
-            { diamonds: "520", price: "820 G" },
-            { diamonds: "680", price: "1015 G" },
-            { diamonds: "930", price: "1540 G" },
-            { diamonds: "1060", price: "1615 G" },
-                 { diamonds: "1200", price: "2010 G" },
-            { diamonds: "2160", price: "3235 G" },
-            { diamonds: "5580", price: "7490 G" }
+        // Photos avec légendes
+        const photos = [
+            { url: "https://files.catbox.moe/7g5hc7.jpg", caption: "Un merveilleux souvenir ensemble" },
+            { url: "https://files.catbox.moe/ef6s80.jpg", caption: "Ton sourire illumine ma vie" },
+            { url: "https://files.catbox.moe/s2quuu.jpg", caption: "Des moments inoubliables" },
+            { url: "https://files.catbox.moe/guoivk.jpg", caption: "La plus belle" },
+            { url: "https://files.catbox.moe/lm69vt.jpg", caption: "Toujours dans mon cœur" },
+            { url: "https://files.catbox.moe/15pgey.jpg", caption: "Mon bonheur" },
+            { url: "https://files.catbox.moe/6j7iqa.jpg", caption: "Un regard qui m'enchante" },
+            { url: "https://files.catbox.moe/bwl004.jpg", caption: "Pour l'éternité" },
+            { url: "https://files.catbox.moe/yn8me7.jpg", caption: "Ma personne préférée" }
         ];
 
-        // Générer les produits
-        const productsContainer = document.querySelector('.products');
-        
-        products.forEach(product => {
-            const productCard = document.createElement('div');
-            productCard.className = 'product-card';
+        // Fonction pour charger la galerie
+        function loadGallery() {
+            const gallery = document.getElementById('photoGallery');
             
-            productCard.innerHTML = `
-                <div class="product-header">
-                    <h3>💎 ${product.diamonds} Diamants</h3>
-                </div>
-                <div class="product-body">
-                    <div class="product-price">${product.price}</div>
-                    <button class="product-button" data-diamonds="${product.diamonds}" data-price="${product.price}">
-                        Acheter maintenant
-                    </button>
-                </div>
-            `;
-            
-            productsContainer.appendChild(productCard);
-        });
-
-        // Gestion du changement de thème
-        const themeToggle = document.getElementById('themeToggle');
-        const themeIcon = themeToggle.querySelector('i');
-        
-        themeToggle.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            
-            if (document.body.classList.contains('dark-mode')) {
-                themeIcon.classList.remove('fa-moon');
-                themeIcon.classList.add('fa-sun');
-            } else {
-                themeIcon.classList.remove('fa-sun');
-                themeIcon.classList.add('fa-moon');
-            }
-        });
-
-        // Gestion des boutons d'achat
-        const productButtons = document.querySelectorAll('.product-button');
-        
-        productButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const diamonds = button.getAttribute('data-diamonds');
-                const price = button.getAttribute('data-price');
+            photos.forEach((photo, index) => {
+                const photoItem = document.createElement('div');
+                photoItem.className = 'photo-item';
+                photoItem.style.animationDelay = `${index * 0.1}s`;
                 
-                const message = `Bonjour, je souhaite acheter ${diamonds} diamants Free Fire pour ${price}.`;
-                const whatsappUrl = `https://wa.me/50942377815?text=${encodeURIComponent(message)}`;
+                photoItem.innerHTML = `
+                    <img src="${photo.url}" alt="Photo de Gayoo ${index + 1}" loading="lazy">
+                    <div class="photo-caption">
+                        <p>${photo.caption}</p>
+                    </div>
+                `;
                 
-                window.open(whatsappUrl, '_blank');
+                gallery.appendChild(photoItem);
             });
-        });
+        }
 
-        // Gestion du formulaire de contact
-        const commentForm = document.getElementById('commentForm');
-        
-        commentForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+        // Fonction pour créer des cœurs flottants
+        function createFloatingHearts() {
+            const heartsContainer = document.getElementById('hearts-container');
+            const heartCount = 30;
             
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Ici, normalement, vous enverriez ces données à un serveur
-            alert(`Merci ${name} pour votre message ! Nous vous répondrons bientôt.`);
-            commentForm.reset();
-        });
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = '<i class="fas fa-heart"></i>';
+                
+                // Position aléatoire
+                const leftPos = Math.random() * 100;
+                const delay = Math.random() * 15;
+                const duration = 15 + Math.random() * 10;
+                const size = 15 + Math.random() * 25;
+                
+                heart.style.left = `${leftPos}%`;
+                heart.style.animationDelay = `${delay}s`;
+                heart.style.animationDuration = `${duration}s`;
+                heart.style.fontSize = `${size}px`;
+                
+                heartsContainer.appendChild(heart);
+            }
+        }
 
-        // Gestion du bouton WhatsApp flottant
-        const whatsappFloat = document.querySelector('.whatsapp-float');
-        
-        whatsappFloat.addEventListener('click', () => {
-            const message = "Bonjour, je souhaite obtenir des informations sur les recharges Free Fire.";
-            const whatsappUrl = `https://wa.me/50942377815?text=${encodeURIComponent(message)}`;
+        // Fonction pour afficher un effet de confetti au chargement
+        function createBirthdayEffect() {
+            const title = document.querySelector('.title');
             
-            window.open(whatsappUrl, '_blank');
+            // Animation de secousse pour le titre
+            title.addEventListener('mouseover', () => {
+                title.style.transform = 'scale(1.05)';
+                setTimeout(() => {
+                    title.style.transform = 'scale(1)';
+                }, 300);
+            });
+            
+            // Ajouter des cœurs quand on clique
+            document.addEventListener('click', (e) => {
+                const heart = document.createElement('div');
+                heart.innerHTML = '<i class="fas fa-heart"></i>';
+                heart.style.position = 'fixed';
+                heart.style.left = `${e.clientX}px`;
+                heart.style.top = `${e.clientY}px`;
+                heart.style.color = '#ff4081';
+                heart.style.fontSize = '20px';
+                heart.style.pointerEvents = 'none';
+                heart.style.zIndex = '9999';
+                heart.style.animation = 'float 1.5s ease-out forwards';
+                
+                document.body.appendChild(heart);
+                
+                setTimeout(() => {
+                    heart.remove();
+                }, 1500);
+            });
+        }
+
+        // Initialisation quand la page est chargée
+        document.addEventListener('DOMContentLoaded', () => {
+            loadGallery();
+            createFloatingHearts();
+            createBirthdayEffect();
+            
+            // Animation d'apparition progressive pour le texte
+            const messageParagraphs = document.querySelectorAll('.message-text p');
+            messageParagraphs.forEach((p, index) => {
+                p.style.animationDelay = `${index * 0.5}s`;
+                p.style.animation = 'textAppear 1.5s ease-out forwards';
+                p.style.opacity = '0';
+            });
+            
+            // Jouer une douce musique d'anniversaire (optionnel)
+            const audio = new Audio('https://assets.mixkit.co/music/preview/mixkit-happy-birthday-to-you-443.mp3');
+            audio.volume = 0.3;
+            
+            // Démarrer la musique après un clic
+            document.body.addEventListener('click', () => {
+                audio.play().catch(e => console.log("Lecture automatique bloquée, cliquer pour jouer"));
+            }, { once: true });
         });
     </script>
 </body>
-</html> 
+</html>
