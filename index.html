@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joyeux Anniversaire Gayoo !</title>
+    <title>Mon Cœur pour Toi</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(135deg, #f9c5d1 0%, #f5a9c8 50%, #c2a8e3 100%);
+            background-color: #fdf2f8;
             color: #5a3d5c;
+            line-height: 1.6;
             overflow-x: hidden;
-            min-height: 100vh;
         }
 
         .container {
@@ -27,265 +26,45 @@
             padding: 20px;
         }
 
-        /* Header */
+        /* Header Styles */
         header {
+            background: linear-gradient(135deg, #d63384 0%, #8b5a9d 100%);
+            color: white;
             text-align: center;
             padding: 40px 20px;
-            animation: fadeIn 2s ease-out;
-        }
-
-        .title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 5rem;
-            color: #ff4081;
-            text-shadow: 3px 3px 0 #ffb3d9, 6px 6px 0 rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            line-height: 1.2;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        .subtitle {
-            font-size: 1.8rem;
-            color: #8a4b8c;
-            font-weight: 300;
-            margin-bottom: 40px;
-        }
-
-        /* Main Content */
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            gap: 60px;
-            margin-bottom: 60px;
-        }
-
-        /* Love Message Section */
-        .love-message {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 30px 30px;
+            box-shadow: 0 5px 15px rgba(139, 90, 157, 0.3);
             position: relative;
             overflow: hidden;
-            animation: slideUp 1.5s ease-out;
         }
 
-        .love-message:before {
-            content: "";
+        header:before {
+            content: '';
             position: absolute;
             top: 0;
-            left: 0;
-            width: 10px;
-            height: 100%;
-            background: linear-gradient(to bottom, #ff4081, #c2a8e3);
-        }
-
-        .message-title {
-            font-size: 2.5rem;
-            color: #ff4081;
-            margin-bottom: 25px;
-            text-align: center;
-            font-family: 'Dancing Script', cursive;
-        }
-
-        .message-text {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            text-align: justify;
-            margin-bottom: 20px;
-            animation: textAppear 3s ease-out;
-        }
-
-        .heart-icon {
-            color: #ff4081;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            animation: heartbeat 1.5s infinite;
-        }
-
-        /* Gallery Section */
-        .gallery-section {
-            animation: fadeIn 2s ease-out 0.5s both;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            color: #8a4b8c;
-            text-align: center;
-            margin-bottom: 40px;
-            font-family: 'Dancing Script', cursive;
-            position: relative;
-        }
-
-        .section-title:after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 150px;
-            height: 4px;
-            background: linear-gradient(to right, #ff4081, #c2a8e3);
-            border-radius: 2px;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 25px;
-        }
-
-        .photo-item {
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-            transition: transform 0.5s ease, box-shadow 0.5s ease;
-            height: 300px;
-            position: relative;
-        }
-
-        .photo-item:hover {
-            transform: translateY(-10px) scale(1.03);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-        }
-
-        .photo-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s ease;
-        }
-
-        .photo-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .photo-caption {
-            position: absolute;
-            bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(90, 61, 92, 0.85);
-            color: white;
-            padding: 15px;
-            transform: translateY(100%);
-            transition: transform 0.5s ease;
-            text-align: center;
+            height: 5px;
+            background: linear-gradient(90deg, #ffd6e7, #ff9ec0, #ff6b9d, #ff4081);
         }
 
-        .photo-item:hover .photo-caption {
-            transform: translateY(0);
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 30px;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 20px 20px 0 0;
-            margin-top: 40px;
-            animation: fadeIn 2s ease-out 1s both;
-        }
-
-        .footer-text {
-            font-size: 1.2rem;
-            color: #8a4b8c;
-            margin-bottom: 15px;
-        }
-
-        .signature {
-            font-family: 'Dancing Script', cursive;
-            font-size: 2.5rem;
-            color: #ff4081;
-            font-weight: bold;
-        }
-
-        /* Animations */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-20px); }
-        }
-
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-        }
-
-        @keyframes textAppear {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .title {
-                font-size: 3.5rem;
-            }
-            
-            .subtitle {
-                font-size: 1.4rem;
-            }
-            
-            .message-title {
-                font-size: 2rem;
-            }
-            
-            .message-text {
-                font-size: 1.1rem;
-            }
-            
-            .gallery {
-                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            }
-            
-            .photo-item {
-                height: 250px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .title {
-                font-size: 2.8rem;
-            }
-            
-            .love-message {
-                padding: 25px 20px;
-            }
-            
-            .gallery {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Floating Hearts */
-        .floating-hearts {
-            position: fixed;
-            top: 0;
-            left: 0;
+        .hearts-container {
+            position: absolute;
             width: 100%;
             height: 100%;
+            top: 0;
+            left: 0;
             pointer-events: none;
-            z-index: -1;
         }
 
         .heart {
             position: absolute;
-            color: rgba(255, 64, 129, 0.3);
+            color: rgba(255, 255, 255, 0.7);
             font-size: 20px;
-            animation: floatHeart 15s linear infinite;
+            animation: float 6s infinite linear;
         }
 
-        @keyframes floatHeart {
+        @keyframes float {
             0% {
                 transform: translateY(100vh) rotate(0deg);
                 opacity: 0;
@@ -301,169 +80,463 @@
                 opacity: 0;
             }
         }
-    </style>
-</head>
-<body>
-    <!-- Floating hearts background -->
-    <div class="floating-hearts" id="hearts-container"></div>
 
-    <div class="container">
-        <header>
-            <h1 class="title">Joyeux Anniversaire Gayoo !</h1>
-            <p class="subtitle">Une journée spéciale pour une personne extraordinaire</p>
-        </header>
-
-        <main class="main-content">
-            <section class="love-message">
-                <h2 class="message-title">Mon message pour toi</h2>
-                <div class="message-text">
-                    <p>Ma chère Gayoo,</p>
-                    
-                    <p>En ce jour si spécial, je voulais t'écrire ces mots pour célébrer non seulement ta naissance, mais aussi la personne merveilleuse que tu es. Même si la distance nous sépare parfois, sache que tu occupes une place immense dans mon cœur, chaque jour, chaque heure, chaque minute.</p>
-                    
-                    <p>Je me souviens de tous ces moments que nous avons partagés, ces rires, ces conversations interminables, ces regards échangés qui en disaient plus long que mille mots. Chaque souvenir avec toi est un trésor que je chéris profondément.</p>
-                    
-                    <p>Tu es cette lumière qui illumine mes journées même lorsqu'elles sont grises, cette douce mélodie qui résonne dans le silence de mes pensées. Ta présence dans ma vie est un cadeau inestimable, et je suis infiniment reconnaissant de te connaître, de t'aimer.</p>
-                    
-                    <p>Aujourd'hui, en ce jour d'anniversaire, je te souhaite tout le bonheur du monde. Que cette nouvelle année de ta vie t'apporte joie, réussite, épanouissement et tous ces petits bonheurs qui font briller tes yeux. Que tes rêves les plus fous se réalisent et que chaque jour te rapproche un peu plus de la vie que tu désires.</p>
-                    
-                    <p>La distance n'est qu'un test pour nous prouver que notre lien est plus fort que tout. Et chaque jour qui passe renforce ma conviction que ce que nous avons est précieux, unique et mérite d'être cultivé avec tout l'amour dont nous sommes capables.</p>
-                    
-                    <p>Joyeux anniversaire, ma belle Gayoo <i class="fas fa-heart heart-icon"></i> Puisses-tu être comblée de toutes les merveilles que la vie peut offrir. Je pense à toi aujourd'hui plus que jamais, et je célèbre ton existence avec tout mon cœur.</p>
-                    
-                    <p>Avec tout mon amour, pour aujourd'hui, pour demain, pour toujours.</p>
-                </div>
-            </section>
-
-            <section class="gallery-section">
-                <h2 class="section-title">Nos Souvenirs</h2>
-                <div class="gallery" id="photoGallery">
-                    <!-- Les photos seront ajoutées ici dynamiquement -->
-                </div>
-            </section>
-        </main>
-
-        <footer>
-            <p class="footer-text">Je t'aime plus que les mots ne pourront jamais l'exprimer</p>
-            <p class="signature">Ton amoureux</p>
-        </footer>
-    </div>
-
-    <script>
-        // Photos avec légendes
-        const photos = [
-            { url: "https://files.catbox.moe/7g5hc7.jpg", caption: "Un merveilleux souvenir ensemble" },
-            { url: "https://files.catbox.moe/ef6s80.jpg", caption: "Ton sourire illumine ma vie" },
-            { url: "https://files.catbox.moe/s2quuu.jpg", caption: "Des moments inoubliables" },
-            { url: "https://files.catbox.moe/guoivk.jpg", caption: "La plus belle" },
-            { url: "https://files.catbox.moe/lm69vt.jpg", caption: "Toujours dans mon cœur" },
-            { url: "https://files.catbox.moe/15pgey.jpg", caption: "Mon bonheur" },
-            { url: "https://files.catbox.moe/6j7iqa.jpg", caption: "Un regard qui m'enchante" },
-            { url: "https://files.catbox.moe/bwl004.jpg", caption: "Pour l'éternité" },
-            { url: "https://files.catbox.moe/yn8me7.jpg", caption: "Ma personne préférée" }
-        ];
-
-        // Fonction pour charger la galerie
-        function loadGallery() {
-            const gallery = document.getElementById('photoGallery');
-            
-            photos.forEach((photo, index) => {
-                const photoItem = document.createElement('div');
-                photoItem.className = 'photo-item';
-                photoItem.style.animationDelay = `${index * 0.1}s`;
-                
-                photoItem.innerHTML = `
-                    <img src="${photo.url}" alt="Photo de Gayoo ${index + 1}" loading="lazy">
-                    <div class="photo-caption">
-                        <p>${photo.caption}</p>
-                    </div>
-                `;
-                
-                gallery.appendChild(photoItem);
-            });
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        // Fonction pour créer des cœurs flottants
-        function createFloatingHearts() {
-            const heartsContainer = document.getElementById('hearts-container');
-            const heartCount = 30;
-            
-            for (let i = 0; i < heartCount; i++) {
-                const heart = document.createElement('div');
-                heart.className = 'heart';
-                heart.innerHTML = '<i class="fas fa-heart"></i>';
-                
-                // Position aléatoire
-                const leftPos = Math.random() * 100;
-                const delay = Math.random() * 15;
-                const duration = 15 + Math.random() * 10;
-                const size = 15 + Math.random() * 25;
-                
-                heart.style.left = `${leftPos}%`;
-                heart.style.animationDelay = `${delay}s`;
-                heart.style.animationDuration = `${duration}s`;
-                heart.style.fontSize = `${size}px`;
-                
-                heartsContainer.appendChild(heart);
+        .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        /* Main Photo Animation */
+        .main-photo-container {
+            margin: 40px auto;
+            max-width: 600px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(214, 51, 132, 0.3);
+            position: relative;
+        }
+
+        .main-photo {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            display: block;
+            animation: heartbeat 2.5s infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.03);
             }
         }
 
-        // Fonction pour afficher un effet de confetti au chargement
-        function createBirthdayEffect() {
-            const title = document.querySelector('.title');
-            
-            // Animation de secousse pour le titre
-            title.addEventListener('mouseover', () => {
-                title.style.transform = 'scale(1.05)';
-                setTimeout(() => {
-                    title.style.transform = 'scale(1)';
-                }, 300);
-            });
-            
-            // Ajouter des cœurs quand on clique
-            document.addEventListener('click', (e) => {
-                const heart = document.createElement('div');
-                heart.innerHTML = '<i class="fas fa-heart"></i>';
-                heart.style.position = 'fixed';
-                heart.style.left = `${e.clientX}px`;
-                heart.style.top = `${e.clientY}px`;
-                heart.style.color = '#ff4081';
-                heart.style.fontSize = '20px';
-                heart.style.pointerEvents = 'none';
-                heart.style.zIndex = '9999';
-                heart.style.animation = 'float 1.5s ease-out forwards';
-                
-                document.body.appendChild(heart);
-                
-                setTimeout(() => {
-                    heart.remove();
-                }, 1500);
-            });
+        .photo-overlay {
+            position: absolute;
+            bottom: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            color: white;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
         }
 
-        // Initialisation quand la page est chargée
-        document.addEventListener('DOMContentLoaded', () => {
-            loadGallery();
-            createFloatingHearts();
-            createBirthdayEffect();
+        /* Messages Section */
+        .messages-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 10px 25px rgba(139, 90, 157, 0.1);
+        }
+
+        .section-title {
+            color: #d63384;
+            border-bottom: 2px solid #f8bbd9;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            font-size: 1.5rem;
+        }
+
+        .message-box {
+            background: #fdf2f8;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-left: 5px solid #d63384;
+        }
+
+        .message-title {
+            color: #8b5a9d;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .message-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .heart-emoji {
+            color: #ff4081;
+            font-size: 1.5rem;
+            margin: 0 5px;
+        }
+
+        /* Photo Gallery */
+        .gallery-section {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 10px 25px rgba(139, 90, 157, 0.1);
+        }
+
+        .gallery-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .photo-input-container {
+            background: #f9f0ff;
+            border: 2px dashed #d63384;
+            border-radius: 15px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 200px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .photo-input-container:hover {
+            background: #f4e5ff;
+            transform: translateY(-5px);
+        }
+
+        .photo-input-container i {
+            font-size: 3rem;
+            color: #d63384;
+            margin-bottom: 15px;
+        }
+
+        .photo-input-container p {
+            text-align: center;
+            color: #8b5a9d;
+        }
+
+        .photo-item {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            height: 200px;
+        }
+
+        .photo-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+
+        .photo-item:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Love Note */
+        .love-note {
+            background: linear-gradient(135deg, #ffd6e7 0%, #ffafcc 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(255, 107, 157, 0.2);
+        }
+
+        .love-note h2 {
+            color: #d63384;
+            margin-bottom: 20px;
+        }
+
+        .love-note p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 25px;
+        }
+
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            color: #8b5a9d;
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #8b5a9d;
+            border-top: 1px solid #f8bbd9;
+            margin-top: 40px;
+        }
+
+        .footer-heart {
+            color: #ff4081;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.2);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
             
-            // Animation d'apparition progressive pour le texte
-            const messageParagraphs = document.querySelectorAll('.message-text p');
-            messageParagraphs.forEach((p, index) => {
-                p.style.animationDelay = `${index * 0.5}s`;
-                p.style.animation = 'textAppear 1.5s ease-out forwards';
-                p.style.opacity = '0';
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .gallery-container {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .message-content {
+                font-size: 1rem;
+            }
+            
+            .main-photo {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="hearts-container" id="heartsContainer"></div>
+        <div class="container">
+            <h1><i class="fas fa-heart"></i> Pour Mon Amour Éternel <i class="fas fa-heart"></i></h1>
+            <p class="subtitle">Chaque moment avec toi est un trésor que je chéris</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-photo-container">
+            <img src="https://files.catbox.moe/t7bg12.jpg" alt="Notre souvenir spécial" class="main-photo" id="mainPhoto">
+            <div class="photo-overlay">
+                <h2>Un moment inoubliable</h2>
+                <p>Cette photo représente notre amour éternel</p>
+            </div>
+        </div>
+
+        <div class="messages-section">
+            <h2 class="section-title"><i class="fas fa-envelope-open-text"></i> Mes Messages pour Toi</h2>
+            
+            <div class="message-box">
+                <h3 class="message-title"><i class="fas fa-memory"></i> Souvenir à la plage</h3>
+                <div class="message-content">
+                    <p>Tu te rappelles bébé ? C'était notre deuxième fois à la plage. On s'est évadé, on a fugué et nous y sommes allés. On s'est assis, embrassés et rigolé. T'as aimé le calme, le doux son de la plage. Il y avait un bateau, on s'est couchés dessus. On a fait des trucs, trucs 😅💕</p>
+                    <p>On a failli se faire prendre, tu te rappelles ? Et puis l'heure a passé, nous avons continué nos activités jusqu'à oublier le temps passé. Je me rappelle comme si c'était hier. C'est dingue non 🤭❤️ On a traversé tellement de péripéties.</p>
+                </div>
+            </div>
+            
+            <div class="message-box">
+                <h3 class="message-title"><i class="fas fa-birthday-cake"></i> Ton anniversaire inoubliable</h3>
+                <div class="message-content">
+                    <p>Et ça c'était le 15 juillet. Ton anniversaire, c'était magnifique. Je me suis donné à fond pour ce jour. J'ai voulu te faire plaisir 😅 Je crois que c'était plutôt réussi 💕 T'as aimé. Je t'ai décroché pas mal de sourires en ce jour 🤭❤️</p>
+                    <p>Oui chérie, on a vécu pas mal de trucs en si peu de temps 🫂❤️ Chaque moment avec toi est spécial et restera gravé dans ma mémoire pour toujours.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="gallery-section">
+            <h2 class="section-title"><i class="fas fa-images"></i> Notre Galerie de Souvenirs</h2>
+            <p>Ajoute ici nos photos spéciales en entrant les URLs ci-dessous</p>
+            
+            <div class="gallery-container" id="galleryContainer">
+                <!-- Les photos seront ajoutées ici dynamiquement -->
+            </div>
+            
+            <div class="photo-input-container" onclick="document.getElementById('urlInputs').style.display='block'">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Clique ici pour ajouter jusqu'à 10 photos avec leurs URLs</p>
+            </div>
+            
+            <div id="urlInputs" style="display: none; margin-top: 30px;">
+                <h3 style="color: #d63384; margin-bottom: 15px;">Entrez les URLs de vos photos :</h3>
+                <div id="inputContainer"></div>
+                <button onclick="addPhotoInput()" style="background: #d63384; color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; margin-top: 15px;">
+                    <i class="fas fa-plus"></i> Ajouter un champ URL
+                </button>
+                <button onclick="loadPhotos()" style="background: #8b5a9d; color: white; border: none; padding: 10px 20px; border-radius: 10px; cursor: pointer; margin-top: 15px; margin-left: 10px;">
+                    <i class="fas fa-images"></i> Afficher les photos
+                </button>
+            </div>
+        </div>
+
+        <div class="love-note">
+            <h2><i class="fas fa-heart"></i> Mon Engagement envers Toi <i class="fas fa-heart"></i></h2>
+            <p>Ma chérie, à travers ces mots et ces souvenirs, je veux te rappeler à quel point tu es importante pour moi. Chaque jour à tes côtés est un cadeau, et même quand je fais des erreurs, mon amour pour toi ne faiblit jamais.</p>
+            <p>Je m'excuse sincèrement pour les moments où j'ai pu te blesser, et je promets de toujours faire de mon mieux pour être l'homme que tu mérites. Notre histoire est le plus beau chapitre de ma vie, et j'ai hâte d'en écrire beaucoup d'autres avec toi.</p>
+            <p>Je t'aime plus que les mots ne peuvent exprimer.</p>
+            <div class="signature">Pour toujours ton homme</div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Créé avec <span class="footer-heart"><i class="fas fa-heart"></i></span> pour la femme de ma vie</p>
+        <p>Chaque jour avec toi est une bénédiction</p>
+    </footer>
+
+    <script>
+        // Créer des cœurs flottants
+        function createHearts() {
+            const container = document.getElementById('heartsContainer');
+            const heartCount = 25;
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '❤';
+                
+                // Position aléatoire
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                heart.style.fontSize = (Math.random() * 15 + 15) + 'px';
+                
+                container.appendChild(heart);
+            }
+        }
+
+        // Initialiser la galerie
+        function initializeGallery() {
+            const galleryContainer = document.getElementById('galleryContainer');
+            const inputContainer = document.getElementById('inputContainer');
+            
+            // Créer les placeholders pour les photos
+            for (let i = 0; i < 10; i++) {
+                const photoItem = document.createElement('div');
+                photoItem.className = 'photo-item';
+                photoItem.id = `photoItem${i}`;
+                photoItem.innerHTML = `<img src="https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80" alt="Placeholder photo ${i+1}">`;
+                galleryContainer.appendChild(photoItem);
+                
+                // Ajouter un champ d'entrée pour l'URL
+                const inputDiv = document.createElement('div');
+                inputDiv.style.marginBottom = '10px';
+                inputDiv.innerHTML = `
+                    <label for="photoUrl${i}">Photo ${i+1}:</label>
+                    <input type="text" id="photoUrl${i}" placeholder="https://example.com/photo${i+1}.jpg" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #d63384; border-radius: 5px;">
+                `;
+                inputContainer.appendChild(inputDiv);
+            }
+        }
+
+        // Ajouter un champ URL supplémentaire
+        function addPhotoInput() {
+            const inputContainer = document.getElementById('inputContainer');
+            const currentCount = inputContainer.children.length;
+            
+            if (currentCount < 15) {
+                const inputDiv = document.createElement('div');
+                inputDiv.style.marginBottom = '10px';
+                inputDiv.innerHTML = `
+                    <label for="photoUrl${currentCount}">Photo ${currentCount+1}:</label>
+                    <input type="text" id="photoUrl${currentCount}" placeholder="https://example.com/photo${currentCount+1}.jpg" style="width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #d63384; border-radius: 5px;">
+                `;
+                inputContainer.appendChild(inputDiv);
+            } else {
+                alert('Maximum 15 photos autorisées');
+            }
+        }
+
+        // Charger les photos à partir des URLs
+        function loadPhotos() {
+            const inputContainer = document.getElementById('inputContainer');
+            const inputs = inputContainer.getElementsByTagName('input');
+            
+            for (let i = 0; i < inputs.length; i++) {
+                const url = inputs[i].value.trim();
+                const photoItem = document.getElementById(`photoItem${i}`);
+                
+                if (url) {
+                    // Si l'élément photo n'existe pas, le créer
+                    if (!photoItem && i < 15) {
+                        const galleryContainer = document.getElementById('galleryContainer');
+                        const newPhotoItem = document.createElement('div');
+                        newPhotoItem.className = 'photo-item';
+                        newPhotoItem.id = `photoItem${i}`;
+                        galleryContainer.appendChild(newPhotoItem);
+                    }
+                    
+                    // Mettre à jour l'image
+                    const imgElement = document.getElementById(`photoItem${i}`).querySelector('img');
+                    if (imgElement) {
+                        imgElement.src = url;
+                        imgElement.onerror = function() {
+                            this.src = 'https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=80';
+                            alert(`L'URL de la photo ${i+1} n'a pas pu être chargée. L'image par défaut sera affichée.`);
+                        };
+                    }
+                }
+            }
+            
+            alert('Les photos ont été mises à jour!');
+        }
+
+        // Animation pour la photo principale
+        function animateMainPhoto() {
+            const photo = document.getElementById('mainPhoto');
+            let scale = 1;
+            let direction = 0.01;
+            
+            setInterval(() => {
+                scale += direction;
+                if (scale > 1.03 || scale < 1) {
+                    direction *= -1;
+                }
+                photo.style.transform = `scale(${scale})`;
+            }, 100);
+        }
+
+        // Initialisation
+        window.onload = function() {
+            createHearts();
+            initializeGallery();
+            
+            // Démarrer l'animation de la photo principale
+            setTimeout(() => {
+                animateMainPhoto();
+            }, 1000);
+            
+            // Ajouter un effet de frappe aux messages
+            const messageContents = document.querySelectorAll('.message-content');
+            messageContents.forEach(content => {
+                const text = content.innerHTML;
+                content.innerHTML = '';
+                let i = 0;
+                
+                function typeWriter() {
+                    if (i < text.length) {
+                        content.innerHTML += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, 10);
+                    }
+                }
+                
+                // Démarrer l'effet après un délai
+                setTimeout(typeWriter, 500);
             });
-            
-            // Jouer une douce musique d'anniversaire (optionnel)
-            const audio = new Audio('https://assets.mixkit.co/music/preview/mixkit-happy-birthday-to-you-443.mp3');
-            audio.volume = 0.3;
-            
-            // Démarrer la musique après un clic
-            document.body.addEventListener('click', () => {
-                audio.play().catch(e => console.log("Lecture automatique bloquée, cliquer pour jouer"));
-            }, { once: true });
-        });
+        };
     </script>
 </body>
-</html>
+    </html>
